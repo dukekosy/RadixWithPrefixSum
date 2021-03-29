@@ -27,7 +27,8 @@ Looking at bubble sort, merge sort, quick sort and a number of other methods I'm
 My research has found a mix of radix sort with count sort using a prefix sum will help achieve linear time O(n).
 
 Did make sorting generic to handle double etc as this would affect performance for the type checks.
-https://stackoverflow.com/questions/6224368/does-using-generics-in-java-affect-performance#:~:text=Yes%2C%20it%20does%20affect%20performance,the%20compiler%20creates%20type%2Dcasts.&text=In%20Java%20generics%20only%20ensure%20type%20safety%20at%20compile%20time.
+https://stackoverflow.com/questions/6224368/does-using-generics-in-java-affect-performance#:~:text=Yes%2C%20it%20does%20affect%20performance,
+the%20compiler%20creates%20type%2Dcasts.&text=In%20Java%20generics%20only%20ensure%20type%20safety%20at%20compile%20time.
 
 Looking at techniques for reading a file. The java 8 technique using File api is slower than the good old BufferdReader.readline.
 Reasearch is found in this link.
