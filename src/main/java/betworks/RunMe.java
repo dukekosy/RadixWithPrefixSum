@@ -41,19 +41,21 @@ public final class RunMe {
 
   private final int streamSize;
   private FileHandler fileHandler;
+  public static final String FILENAME = System.getProperty("user.dir") + "\\sorted.txt";
 
   RunMe(final int streamSize) {
     this.streamSize = streamSize;
   }
 
   public static void main(String[] args) {
+
     RunMe runMe = new RunMe(1000000);
     runMe.sort();
   }
 
   void sort() {
 
-    fileHandler = new FileHandler(System.getProperty("user.dir") + "\\unsorted.txt", NumberUtils.getRandomIntegers(streamSize));
+    fileHandler = new FileHandler(FILENAME, NumberUtils.getRandomIntegers(streamSize));
 
     long startTime = System.nanoTime();
     try {
@@ -78,7 +80,7 @@ public final class RunMe {
     durationMS = (endTime - startTime) / 1000000;
     System.out.println("sort " + durationMS);
 
-    FileHandler fileHandler2 = new FileHandler(System.getProperty("user.dir") + "\\sorted.txt", array);
+    FileHandler fileHandler2 = new FileHandler(FILENAME, array);
     startTime = System.nanoTime();
     try {
       fileHandler2.writeFileBuffered();
